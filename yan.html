@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBER TEAM - BROADCAST</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .terminal {
+            width: 90%;
+            max-width: 500px;
+            background: #050505;
+            border: 1px solid #00ff00;
+            padding: 25px;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+            border-radius: 5px;
+            text-align: center;
+        }
+        h1 { 
+            font-size: 1.4rem; 
+            color: #ff0000;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+        .sub-header {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 25px;
+        }
+        .pergunta {
+            font-size: 1.2rem;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        button {
+            font-family: inherit;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 12px 30px;
+            border: 1px solid #00ff00;
+            background: transparent;
+            color: #00ff00;
+            cursor: pointer;
+            width: 120px;
+            transition: all 0.2s;
+        }
+        button:hover {
+            background: #00ff00;
+            color: #000;
+        }
+        .resultado { 
+            margin-top: 30px; 
+            white-space: pre-wrap; 
+            font-weight: bold;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            min-height: 80px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="terminal">
+    <h1>CYBER TEAM COMUNICADO:</h1>
+    <div class="sub-header">YAN GAY PRA PORRA MENO, PARA DE JOGAR NO TIGRIN</div>
+    
+    <div class="pergunta">Yan é gay?</div>
+    
+    <div class="btn-group">
+        <button onclick="resposta('sim')">SIM</button>
+        <button onclick="resposta('nao')">NÃO</button>
+    </div>
+    
+    <div id="display" class="resultado"></div>
+</div>
+
+<script>
+    function resposta(tipo) {
+        const display = document.getElementById("display");
+        
+        if (tipo === 'sim') {
+            display.style.color = "#00ff00";
+            display.innerText = "🎯 [PARABÉNS!]\nVocê tem uma excelente visão da realidade. Todo mundo na sala já sabia disso menos ele.";
+        } else if (tipo === 'nao') {
+            display.style.color = "#ff0000";
+            display.innerText = "❌ [HUMILHADO COM SUCESSO]\nMentir no sistema da CYBER TEAM dá ban! Vai defender o viciado em usar CPF da avó no Tigrinho? Errou feio.";
+        }
+    }
+</script>
+
+</body>
+</html>
+
